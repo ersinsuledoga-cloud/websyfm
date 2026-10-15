@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LGS Matematik & Koçluk | 15 Yıllık Deneyimle Başarıya Yolculuk</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1e1b4b 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-xl bg-brand-600 text-white flex items-center justify-center text-xl font-black shadow-lg shadow-brand-500/30">
+                        <i class="fa-solid fa-square-root-variable"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold text-slate-900 block leading-tight">LGS Matematik</span>
+                        <span class="text-xs text-brand-600 font-medium tracking-wide">15 YILLIK TECRÜBE İLE</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8 font-medium text-slate-600 text-sm">
+                    <a href="#hakkimda" class="hover:text-brand-600 transition">Hakkımda</a>
+                    <a href="#lgs-nedir" class="hover:text-brand-600 transition">LGS Rehberi</a>
+                    <a href="#metodoloji" class="hover:text-brand-600 transition">Çalışma Metodu</a>
+                    <a href="#hesaplayici" class="hover:text-brand-600 transition">Puan Hesaplama</a>
+                    <a href="#sss" class="hover:text-brand-600 transition">S.S.S.</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="#iletisim" class="px-5 py-2.5 rounded-xl bg-brand-600 text-white hover:bg-brand-700 transition font-medium shadow-md shadow-brand-600/20 text-sm">
+                        <i class="fa-solid fa-calendar-check mr-2"></i>Ücretsiz Danışmanlık
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden text-slate-600 hover:text-slate-900 focus:outline-none">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#hakkimda" class="block py-2 text-slate-700 font-medium">Hakkımda</a>
+            <a href="#lgs-nedir" class="block py-2 text-slate-700 font-medium">LGS Rehberi</a>
+            <a href="#metodoloji" class="block py-2 text-slate-700 font-medium">Çalışma Metodu</a>
+            <a href="#hesaplayici" class="block py-2 text-slate-700 font-medium">Puan Hesaplama</a>
+            <a href="#sss" class="block py-2 text-slate-700 font-medium">S.S.S.</a>
+            <a href="#iletisim" class="block text-center py-3 bg-brand-600 text-white rounded-xl font-medium">Ücretsiz Danışmanlık Al</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="gradient-bg text-white relative overflow-hidden py-20 lg:py-28">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-brand-100 text-xs font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-award text-yellow-400"></i> LGS Matematik Uzmanlığı
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white">
+                        Yeni Nesil Sorularda <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300">Ezber Değil Mantık!</span>
+                    </h1>
+                    <p class="text-lg text-slate-300 leading-relaxed max-w-2xl">
+                        15 Yıllık tecrübemle, öğrencilerimin LGS Matematik korkusunu yenmelerini sağlıyor; analitik düşünme, soru analiz etme ve zaman yönetimi becerilerini geliştirerek hayallerindeki liseye taşımaktayım.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a href="#iletisim" class="px-8 py-4 rounded-xl bg-gradient-to-r from-brand-500 to-blue-600 text-white font-bold hover:opacity-95 transition shadow-lg shadow-brand-500/40 text-base">
+                            Ön Kayıt & Bilgi Al <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#lgs-nedir" class="px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold transition text-base">
+                            LGS Rehberini İncele
+                        </a>
+                    </div>
+                    <!-- Quick Stats -->
+                    <div class="grid grid-cols-3 gap-6 pt-8 border-t border-white/10 text-center sm:text-left">
+                        <div>
+                            <div class="text-3xl font-black text-blue-300">15+</div>
+                            <div class="text-xs text-slate-400 font-medium">Yıllık Deneyim</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-black text-cyan-300">%94</div>
+                            <div class="text-xs text-slate-400 font-medium">Hedef Lise Başarısı</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-black text-indigo-300">1000+</div>
+                            <div class="text-xs text-slate-400 font-medium">Başarılı Öğrenci</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Feature Card -->
+                <div class="lg:col-span-5">
+                    <div class="glass-card rounded-3xl p-8 text-slate-900 shadow-2xl relative">
+                        <div class="absolute -top-4 -right-4 bg-yellow-400 text-slate-900 font-black text-xs px-4 py-2 rounded-full uppercase shadow-md">
+                            2025-2026 Sezonu
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-slate-900">LGS Matematik Yol Haritası</h3>
+                        <p class="text-slate-600 text-sm mb-6">Yeni nesil sorularda başarı şans eseri değildir. Sistemli ve planlı çalışmanın sonucudur.</p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4 p-3 rounded-2xl bg-slate-50 border border-slate-100">
+                                <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center font-bold shrink-0">1</div>
+                                <div>
+                                    <h4 class="font-bold text-sm">Temel Kavramlar & Kazanım Testleri</h4>
+                                    <p class="text-xs text-slate-500">Konunun mantığını kavramak için ilk adım.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 p-3 rounded-2xl bg-slate-50 border border-slate-100">
+                                <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold shrink-0">2</div>
+                                <div>
+                                    <h4 class="font-bold text-sm">Beceri Temelli / Yeni Nesil Geçiş</h4>
+                                    <p class="text-xs text-slate-500">Okuduğunu anlama ve matematiksel ifadeye dökme.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 p-3 rounded-2xl bg-slate-50 border border-slate-100">
+                                <div class="w-10 h-10 rounded-xl bg-cyan-100 text-cyan-600 flex items-center justify-center font-bold shrink-0">3</div>
+                                <div>
+                                    <h4 class="font-bold text-sm">Hız & Süre Yönetimi Simülasyonu</h4>
+                                    <p class="text-xs text-slate-500">Sınav anı stratejisi ve tur bindirme taktiği.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#iletisim" class="mt-6 w-full block text-center py-3 bg-slate-900 hover:bg-slate-800 text-white rounded-xl font-semibold transition text-sm">
+                            Danışmanlık Randevusu Oluştur
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="hakkimda" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <!-- Teacher Image / Profile Placeholder -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="aspect-square rounded-3xl bg-gradient-to-tr from-brand-600 to-indigo-600 p-2 shadow-2xl">
+                            <div class="w-full h-full bg-slate-100 rounded-2xl overflow-hidden flex flex-col justify-center items-center text-slate-400 p-8 text-center relative">
+                                <i class="fa-solid fa-user-graduate text-8xl text-brand-200 mb-4"></i>
+                                <span class="text-slate-700 font-bold text-xl">15 Yıllık Deneyim</span>
+                                <span class="text-slate-500 text-sm">Matematik Öğretmeni & LGS Koçu</span>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl border border-slate-100 max-w-xs hidden sm:block">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl font-bold">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-500">Net Artış Oranı</p>
+                                    <p class="text-lg font-bold text-slate-800">+%45 Başarı Artışı</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Text -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-block text-brand-600 font-bold text-sm tracking-widest uppercase">Eğitimci Yaklaşımı</div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+                        "Matematik Yapamayan Öğrenci Yoktur, Doğru Metotla Tanışmamış Öğrenci Vardır."
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        15 yıldır Ortaokul Matematik müfredatı ve LGS hazırlık sürecinde aktif olarak görev almaktayım. Sınav sisteminin geçirdiği dönüşümleri yakından takip ederek öğrencilerimi sadece sınav içeriğine değil, sınav psikolojisine ve zaman yönetimine de hazırlıyorum.
+                    </p>
+                    
+                    <div class="grid sm:grid-cols-2 gap-4 pt-2">
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 flex items-start gap-3">
+                            <i class="fa-solid fa-bullseye text-brand-600 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm">Kişiye Özel Program</h4>
+                                <p class="text-xs text-slate-500 mt-1">Her öğrencinin öğrenme hızı ve eksikleri farklıdır.</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 flex items-start gap-3">
+                            <i class="fa-solid fa-lightbulb text-amber-500 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm">Yeni Nesil Soru Analizi</h4>
+                                <p class="text-xs text-slate-500 mt-1">Görsel Okuma, Mantık-Muhakeme ve Problem Çözme.</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 flex items-start gap-3">
+                            <i class="fa-solid fa-chart-line text-emerald-600 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm">Düzenli Veli Bilgilendirme</h4>
+                                <p class="text-xs text-slate-500 mt-1">Haftalık gelişim raporları ve deneme takipleri.</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 flex items-start gap-3">
+                            <i class="fa-solid fa-brain text-purple-600 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm">Sınav Kaygısı Yönetimi</h4>
+                                <p class="text-xs text-slate-500 mt-1">Özgüven kazandırma ve motivasyon desteği.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LGS Guide Section -->
+    <section id="lgs-nedir" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-bold text-sm tracking-widest uppercase">LGS Sistem Tanıtımı</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">LGS Süreci Nasıl İşler?</h2>
+                <p class="text-slate-600 mt-4">Liselere Geçiş Sistemi (LGS), 8. sınıf öğrencilerinin nitelikli liselere yerleşmek için girdikleri iki oturumlu merkezi bir sınavdır.</p>
+            </div>
+
+            <!-- 2 Sessions Overview -->
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- Sözel Oturum -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm relative overflow-hidden hover:shadow-md transition">
+                    <div class="w-2 h-full bg-indigo-500 absolute left-0 top-0"></div>
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <span class="px-3 py-1 bg-indigo-50 text-indigo-600 font-bold text-xs rounded-full">1. OTURUM</span>
+                            <h3 class="text-2xl font-bold text-slate-900 mt-2">Sözel Bölüm</h3>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-2xl font-black text-slate-900">75</span>
+                            <span class="text-xs text-slate-500 block">Dakika</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex justify-between items-center py-2 border-b border-slate-100 text-sm">
+                            <span class="text-slate-700 font-medium"><i class="fa-solid fa-book text-indigo-500 mr-2"></i> Türkçe</span>
+                            <span class="font-bold text-slate-900">20 Soru</span>
+                        </li>
+                        <li class="flex justify-between items-center py-2 border-b border-slate-100 text-sm">
+                            <span class="text-slate-700 font-medium"><i class="fa-solid fa-landmark text-indigo-500 mr-2"></i> T.C. İnkılap Tarihi</span>
+                            <span class="font-bold text-slate-900">10 Soru</span>
+                        </li>
+                        <li class="flex justify-between items-center py-2 border-b border-slate-100 text-sm">
+                            <span class="text-slate-700 font-medium"><i class="fa-solid fa-mosque text-indigo-500 mr-2"></i> Din Kültürü ve A.B.</span>
+                            <span class="font-bold text-slate-900">10 Soru</span>
+                        </li>
+                        <li class="flex justify-between items-center py-2 text-sm">
+                            <span class="text-slate-700 font-medium"><i class="fa-solid fa-language text-indigo-500 mr-2"></i> Yabancı Dil (İngilizce)</span>
+                            <span class="font-bold text-slate-900">10 Soru</span>
+                        </li>
+                    </ul>
+                    <div class="bg-indigo-50 rounded-xl p-3 text-xs text-indigo-900 font-medium">
+                        Toplam 50 Soru | Saat 09:30 Başlangıç
+                    </div>
+                </div>
+
+                <!-- Sayısal Oturum -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm relative overflow-hidden hover:shadow-md transition">
+                    <div class="w-2 h-full bg-brand-600 absolute left-0 top-0"></div>
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <span class="px-3 py-1 bg-brand-50 text-brand-600 font-bold text-xs rounded-full">2. OTURUM</span>
+                            <h3 class="text-2xl font-bold text-slate-900 mt-2">Sayısal Bölüm</h3>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-2xl font-black text-slate-900">80</span>
+                            <span class="text-xs text-slate-500 block">Dakika</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex justify-between items-center py-2 border-b border-slate-100 text-sm">
+                            <span class="text-slate-700 font-medium"><i class="fa-solid fa-calculator text-brand-600 mr-2"></i> Matematik</span>
+                            <span class="font-bold text-brand-600 text-base">20 Soru (Belirleyici)</span>
+                        </li>
+                        <li class="flex justify-between items-center py-2 border-b border-slate-100 text-sm">
+                            <span class="text-slate-700 font-medium"><i class="fa-solid fa-atom text-brand-600 mr-2"></i> Fen Bilimleri</span>
+                            <span class="font-bold text-slate-900">20 Soru</span>
+                        </li>
+                    </ul>
+                    <div class="bg-brand-50 rounded-xl p-3 text-xs text-brand-900 font-medium">
+                        Toplam 40 Soru | Soru Başına 2 Dakika
+                    </div>
+                </div>
+            </div>
+
+            <!-- Critical LGS Facts -->
+            <div class="grid sm:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl border border-slate-200">
+                    <i class="fa-solid fa-triangle-exclamation text-amber-500 text-2xl mb-3"></i>
+                    <h4 class="font-bold text-slate-900 mb-1">3 Yanlış 1 Doğruyu Götürür</h4>
+                    <p class="text-xs text-slate-600">Emin olunmayan sorularda boş bırakmak, net kaybetmemek açısından hayati önem taşır.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200">
+                    <i class="fa-solid fa-weight-scale text-brand-600 text-2xl mb-3"></i>
+                    <h4 class="font-bold text-slate-900 mb-1">Katsayı Etkisi</h4>
+                    <p class="text-xs text-slate-600">Matematik, Türkçe ve Fen Bilimleri testlerinin katsayısı 4'tür. En yüksek puana katkıyı sağlar.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200">
+                    <i class="fa-solid fa-clock text-emerald-600 text-2xl mb-3"></i>
+                    <h4 class="font-bold text-slate-900 mb-1">Süre Stresi</h4>
+                    <p class="text-xs text-slate-600">Sayısal bölümde soru başına 2 dakika düşer. Matematik için özel pratik taktikleri gerekir.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section id="metodoloji" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-bold text-sm tracking-widest uppercase">Başarı Programım</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">4 Adımda LGS Matematik Metodolojisi</h2>
+                <p class="text-slate-600 mt-4">15 yıllık süreçte geliştirdiğim, yüzlerce öğrencimi Fen Liselerine yerleştiren sistem.</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6">
+                <!-- Step 1 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100 hover:border-brand-500 transition relative">
+                    <div class="w-12 h-12 bg-brand-600 text-white rounded-xl flex items-center justify-center font-black text-xl mb-6 shadow-md shadow-brand-500/30">
+                        01
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Kazanım ve Mantık</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Konunun formüllerini ezberletmek yerine nereden geldiğini öğretiyoruz. Temel kavram oturmadan yeni nesil soruya geçilmez.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100 hover:border-brand-500 transition relative">
+                    <div class="w-12 h-12 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-black text-xl mb-6 shadow-md shadow-indigo-500/30">
+                        02
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Görsel Okuma & Analiz</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Uzun metinli ve şekilli LGS sorularını parçalama, önemli yerlerin altını çizme ve denkleme dönüştürme becerisi kazandırılır.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100 hover:border-brand-500 transition relative">
+                    <div class="w-12 h-12 bg-cyan-600 text-white rounded-xl flex items-center justify-center font-black text-xl mb-6 shadow-md shadow-cyan-500/30">
+                        03
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Yanlış Defteri Taktiği</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Öğrencinin yapamadığı her soru altın değerindedir. Özel Yanlış Defteri ile eksikler sıfırlanana kadar tekrar edilir.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100 hover:border-brand-500 transition relative">
+                    <div class="w-12 h-12 bg-emerald-600 text-white rounded-xl flex items-center justify-center font-black text-xl mb-6 shadow-md shadow-emerald-500/30">
+                        04
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Zamanlı Deneme Taktikleri</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Son aşamada kronometre ile turlama taktiği, soru atlama bilinci ve sınav stresi kontrolü simüle edilir.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Calculator Section -->
+    <section id="hesaplayici" class="py-20 bg-gradient-to-br from-slate-900 to-indigo-950 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-cyan-400 font-bold text-sm tracking-widest uppercase">Etkileşimli Araç</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Pratik LGS Puan Hesaplama</h2>
+                <p class="text-slate-300 mt-2 text-sm">Tahmini LGS Puanınızı ve Netlerinizi Anında Hesaplayın (3 Yanlış 1 Doğruyu Götürür)</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-white/10 backdrop-blur-md p-6 sm:p-10 rounded-3xl border border-white/10 shadow-2xl">
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <!-- Türkçe -->
+                    <div class="bg-white/5 p-4 rounded-2xl border border-white/10">
+                        <label class="font-bold text-sm text-cyan-300 block mb-2"><i class="fa-solid fa-book mr-2"></i>Türkçe (20 Soru)</label>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <span class="text-xs text-slate-400">Doğru</span>
+                                <input type="number" id="tr-d" min="0" max="20" value="18" class="w-full mt-1 bg-slate-800 text-white px-3 py-2 rounded-xl text-center font-bold focus:outline-none focus:ring-2 focus:ring-brand-500">
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-400">Yanlış</span>
+                                <input type="number" id="tr-y" min="0" max="20" value="2" class="w-full mt-1 bg-slate-800 text-white px-3 py-2 rounded-xl text-center font-bold focus:outline-none focus:ring-2 focus:ring-brand-500">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Matematik -->
+                    <div class="bg-brand-500/10 p-4 rounded-2xl border border-brand-500/30">
+                        <label class="font-bold text-sm text-brand-300 block mb-2"><i class="fa-solid fa-calculator mr-2"></i>Matematik (20 Soru)</label>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <span class="text-xs text-slate-400">Doğru</span>
+                                <input type="number" id="mat-d" min="0" max="20" value="16" class="w-full mt-1 bg-slate-800 text-white px-3 py-2 rounded-xl text-center font-bold focus:outline-none focus:ring-2 focus:ring-brand-500">
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-400">Yanlış</span>
+                                <input type="number" id="mat-y" min="0" max="20" value="2" class="w-full mt-1 bg-slate-800 text-white px-3 py-2 rounded-xl text-center font-bold focus:outline-none focus:ring-2 focus:ring-brand-500">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fen Bilimleri -->
+                    <div class="bg-white/5 p-4 rounded-2xl border border-white/10">
+                        <label class="font-bold text-sm text-emerald-300 block mb-2"><i class="fa-solid fa-atom mr-2"></i>Fen Bilimleri (20 Soru)</label>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <span class="text-xs text-slate-400">Doğru</span>
+                                <input type="number" id="fen-d" min="0" max="20" value="17" class="w-full mt-1 bg-slate-800 text-white px-3 py-2 rounded-xl text-center font-bold focus:outline-none focus:ring-2 focus:ring-brand-500">
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-400">Yanlış</span>
+                                <input type="number" id="fen-y" min="0" max="20" value="3" class="w-full mt-1 bg-slate-800 text-white px-3 py-2 rounded-xl text-center font-bold focus:outline-none focus:ring-2 focus:ring-brand-500">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- İnkılap Tarihi -->
+                    <div class="bg-white/5 p-4 rounded-2xl border border-white/10">
+                        <label class="font-bold text-sm text-amber-300 block mb-2"><i class="fa-solid fa-landmark mr-2"></i>İnkılap Tarihi (10 Soru)</label>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <span class="text-xs text-slate-400">Doğru</span>
+                                <input type="number" id="ink-d" min="0" max="10" value="10" class="w-full mt-1 bg-slate-800 text-white px-3 py-2 rounded-xl text-center font-bold focus:outline-none focus:ring-2 focus:ring-brand-500">
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-400">Yanlış</span>
+                                <input type="number" id="ink-y" min="0" max="10" value="0" class="w-full mt-1 bg-slate-800 text-white px-3 py-2 rounded-xl text-center font-bold focus:outline-none focus:ring-2 focus:ring-brand-500">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Din Kültürü -->
+                    <div class="bg-white/5 p-4 rounded-2xl border border-white/10">
+                        <label class="font-bold text-sm text-purple-300 block mb-2"><i class="fa-solid fa-mosque mr-2"></i>Din Kültürü (10 Soru)</label>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <span class="text-xs text-slate-400">Doğru</span>
+                                <input type="number" id="din-d" min="0" max="10" value="10" class="w-full mt-1 bg-slate-800 text-white px-3 py-2 rounded-xl text-center font-bold focus:outline-none focus:ring-2 focus:ring-brand-500">
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-400">Yanlış</span>
+                                <input type="number" id="din-y" min="0" max="10" value="0" class="w-full mt-1 bg-slate-800 text-white px-3 py-2 rounded-xl text-center font-bold focus:outline-none focus:ring-2 focus:ring-brand-500">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Yabancı Dil -->
+                    <div class="bg-white/5 p-4 rounded-2xl border border-white/10">
+                        <label class="font-bold text-sm text-pink-300 block mb-2"><i class="fa-solid fa-language mr-2"></i>Yabancı Dil (10 Soru)</label>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <span class="text-xs text-slate-400">Doğru</span>
+                                <input type="number" id="ing-d" min="0" max="10" value="9" class="w-full mt-1 bg-slate-800 text-white px-3 py-2 rounded-xl text-center font-bold focus:outline-none focus:ring-2 focus:ring-brand-500">
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-400">Yanlış</span>
+                                <input type="number" id="ing-y" min="0" max="10" value="1" class="w-full mt-1 bg-slate-800 text-white px-3 py-2 rounded-xl text-center font-bold focus:outline-none focus:ring-2 focus:ring-brand-500">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calculate Button & Result -->
+                <div class="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
+                    <button id="calc-btn" class="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:opacity-90 font-bold rounded-xl text-white shadow-lg transition">
+                        Puanı Hesapla
+                    </button>
+
+                    <div class="text-center sm:text-right">
+                        <span class="text-xs text-slate-400 block uppercase tracking-widest">Tahmini LGS Puanı</span>
+                        <span id="score-display" class="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-amber-400">442.85</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="sss" class="py-20 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-brand-600 font-bold text-sm tracking-widest uppercase">Merak Edilenler</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-2">Sıkça Sorulan Sorular</h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-bold text-slate-900 flex justify-between items-center">
+                        <span>LGS Matematik soruları neden bu kadar zor geliyor?</span>
+                        <i class="fa-solid fa-chevron-down text-brand-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-4 hidden text-slate-600 text-sm leading-relaxed">
+                        LGS soruları klasik ezber bilgiye dayanmaz. Öğrencinin okuduğunu anlama, mantıksal çıkarım yapma, tablo-grafik okuma ve bunu matematiksel denklemlere dökmesini ister. Sorular aslında zor değil, alışılagelmiş yöntemlerin dışındadır.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-bold text-slate-900 flex justify-between items-center">
+                        <span>LGS hazırlığına ne zaman başlanmalı?</span>
+                        <i class="fa-solid fa-chevron-down text-brand-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-4 hidden text-slate-600 text-sm leading-relaxed">
+                        İdeal süreç 7. sınıfın yaz dönemi veya 8. sınıfın hemen başıdır. Ancak temelinde eksik olan öğrenciler için 7. sınıfta temeli sağlamlaştırmak çok büyük avantaj sağlar.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-bold text-slate-900 flex justify-between items-center">
+                        <span>Günde kaç soru çözülmeli?</span>
+                        <i class="fa-solid fa-chevron-down text-brand-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-4 hidden text-slate-600 text-sm leading-relaxed">
+                        Sayıdan ziyade nitelik önemlidir. Mantığını anlamadan çözülen 200 soru yerine, analiz edilerek, yanlışları öğrenilerek çözülen 50 Yeni Nesil soru çok daha verimlidir.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="iletisim" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-slate-900 rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden">
+                <div class="grid lg:grid-cols-12 gap-12 relative z-10">
+                    <div class="lg:col-span-6 space-y-6">
+                        <span class="px-3 py-1 bg-brand-500/20 text-brand-300 font-bold text-xs rounded-full uppercase">İletişim & Randevu</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold">Öğrencinizin LGS Potansiyelini Birlikte Keşfedelim!</h2>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Ücretsiz Seviye Tespit Analizi ve LGS Yol Haritası görüşmesi için formu doldurabilir veya doğrudan iletişime geçebilirsiniz.
+                        </p>
+
+                        <div class="space-y-4 pt-4">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-brand-400">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-400 block">Telefon / WhatsApp</span>
+                                    <span class="font-bold">+90 (5XX) XXX XX XX</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-brand-400">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-400 block">E-Posta</span>
+                                    <span class="font-bold">lgsmatematik15@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form -->
+                    <div class="lg:col-span-6">
+                        <form id="contact-form" class="bg-white p-6 sm:p-8 rounded-2xl text-slate-900 space-y-4">
+                            <h3 class="text-xl font-bold mb-2">Ücretsiz Ön Görüşme Formu</h3>
+                            <div>
+                                <label class="text-xs font-bold text-slate-700 block mb-1">Veli Adı Soyadı</label>
+                                <input type="text" required placeholder="Adınız Soyadınız" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm">
+                            </div>
+                            <div>
+                                <label class="text-xs font-bold text-slate-700 block mb-1">Telefon Numarası</label>
+                                <input type="tel" required placeholder="05XX XXX XX XX" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm">
+                            </div>
+                            <div>
+                                <label class="text-xs font-bold text-slate-700 block mb-1">Öğrencinin Mevcut Matematik Net Ortalaması</label>
+                                <select class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm text-slate-700">
+                                    <option>0 - 5 Net Arası</option>
+                                    <option>5 - 10 Net Arası</option>
+                                    <option>10 - 15 Net Arası</option>
+                                    <option>15 Net ve Üzeri</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full py-3.5 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl transition text-sm shadow-md">
+                                Başvuru Gönder
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-10 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs">
+            <p>© 2026 LGS Matematik & Koçluk Portalı. 15 Yıllık Tecrübe İle Hazırlanmıştır.</p>
+        </div>
+    </footer>
+
+    <!-- Script for Interactions -->
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ Accordion
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Simple LGS Score Estimator Logic
+        const calcBtn = document.getElementById('calc-btn');
+        
+        function calculateLGS() {
+            // Get inputs
+            const trD = parseFloat(document.getElementById('tr-d').value) || 0;
+            const trY = parseFloat(document.getElementById('tr-y').value) || 0;
+            const matD = parseFloat(document.getElementById('mat-d').value) || 0;
+            const matY = parseFloat(document.getElementById('mat-y').value) || 0;
+            const fenD = parseFloat(document.getElementById('fen-d').value) || 0;
+            const fenY = parseFloat(document.getElementById('fen-y').value) || 0;
+            const inkD = parseFloat(document.getElementById('ink-d').value) || 0;
+            const inkY = parseFloat(document.getElementById('ink-y').value) || 0;
+            const dinD = parseFloat(document.getElementById('din-d').value) || 0;
+            const dinY = parseFloat(document.getElementById('din-y').value) || 0;
+            const ingD = parseFloat(document.getElementById('ing-d').value) || 0;
+            const ingY = parseFloat(document.getElementById('ing-y').value) || 0;
+
+            // Calculate Nets (Net = Doğru - Yanlış/3)
+            const trNet = Math.max(0, trD - (trY / 3));
+            const matNet = Math.max(0, matD - (matY / 3));
+            const fenNet = Math.max(0, fenD - (fenY / 3));
+            const inkNet = Math.max(0, inkD - (inkY / 3));
+            const dinNet = Math.max(0, dinD - (dinY / 3));
+            const ingNet = Math.max(0, ingD - (ingY / 3));
+
+            // Weighted Point Coefficients (Approximate Official LGS Weights)
+            let totalScore = 195 + (trNet * 4.35) + (matNet * 4.45) + (fenNet * 4.15) + (inkNet * 1.68) + (dinNet * 1.88) + (ingNet * 1.52);
+
+            // Bound score between 100 and 500
+            totalScore = Math.min(500, Math.max(100, totalScore));
+
+            document.getElementById('score-display').innerText = totalScore.toFixed(2);
+        }
+
+        calcBtn.addEventListener('click', calculateLGS);
+
+        // Form submission message
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Tebrikler! Ön başvuru talebiniz alınmıştır. En kısa sürede sizinle iletişime geçilecektir.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
